@@ -228,15 +228,15 @@ if predict_button:
 
     if probability < 0.30:
 
-        risk_level = "Low"
+    risk_level = "Low"
 
-    elif probability < 0.70:
+elif probability < 0.85:
 
-        risk_level = "Moderate"
+    risk_level = "Moderate"
 
-    else:
+else:
 
-        risk_level = "High"
+    risk_level = "High"
 
     st.subheader("Risk Stratification")
 
