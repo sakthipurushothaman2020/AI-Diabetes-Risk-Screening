@@ -226,31 +226,27 @@ if predict_button:
     # RISK STRATIFICATION
     # -----------------------------------------------------
 
+    # -----------------------------------------------------
+    # RISK STRATIFICATION
+    # -----------------------------------------------------
+
     if probability < 0.30:
-
-    risk_level = "Low"
-
-elif probability < 0.85:
-
-    risk_level = "Moderate"
-
-else:
-
-    risk_level = "High"
+        risk_level = "Low"
+    elif probability < 0.85:
+        risk_level = "Moderate"
+    else:
+        risk_level = "High"
 
     st.subheader("Risk Stratification")
 
     if risk_level == "Low":
-
         st.success("🟢 Low model-estimated screening risk")
-
     elif risk_level == "Moderate":
-
         st.warning("🟡 Moderate model-estimated screening risk")
-
     else:
-
         st.error("🔴 High model-estimated screening risk")
+
+    
 
     # -----------------------------------------------------
     # NEXT STEP
